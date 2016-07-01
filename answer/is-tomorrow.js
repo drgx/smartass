@@ -12,5 +12,12 @@
  */
 
 module.exports = function isTomorrow(date1, date2) {
-  return date1 < date2;
+	date1.setHours(0);
+	date1.setMinutes(0);
+	date1.setSeconds(0);
+	var tommorow = new Date(date1.setDate(date1.getDate()+1));
+	if (date1.getFullYear() == date2.getFullYear() && date1.getMonth() == date2.getMonth() && date1.getDate() == date2.getDate()) {
+		return true;
+	}
+  return false;
 };

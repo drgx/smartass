@@ -22,5 +22,20 @@
 
 module.exports = function peakPoint(chart) {
   var peaks = [];
+  for (var a= 0; a< chart.length; a++) {
+  	if (a == 0) {
+  		if(chart[a] > chart[a+1]) peaks.push(chart[a]);
+  	}
+  	else if (a +1  == chart.length) {
+  		if(chart[a] > chart[a-1]) peaks.push(chart[a]);	
+  	} else {
+  		if(chart[a] > chart[a+1] && chart[a] > chart[a-1])  {
+       peaks.push(chart[a]); 
+      }
+  	}
+  }
+
+
   return peaks;
 };
+

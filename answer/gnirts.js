@@ -9,5 +9,9 @@
  */
 
 module.exports = function gnirts(string) {
-  return string;
+	var result='';
+	for (var a = string.length-1;  0 <= a; a--) {
+		result+=string[a];
+	}
+  return result;
 };

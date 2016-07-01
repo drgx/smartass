@@ -14,5 +14,12 @@
  */
 
 module.exports = function sayBackward(sentences) {
-  return sentences;
+	sentences = sentences.split('.');
+	sentences.splice(sentences.length-1, 1);
+	sentences = sentences.map(cur => {		
+		return cur.trim().split(' ').reverse().join(' ');				
+	});
+  return sentences.reverse().join('. ').trim()+'.';
 };
+
+// console.log(sayBackward('Lorem ipsum. Dolor sit amet.'))

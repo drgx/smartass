@@ -11,5 +11,9 @@
  */
 
 module.exports = function superflat(array) {
-  return array;
+	var result = [];
+  // for (var a= 0; a< array.length; a++) {
+
+  // }
+  return array.join(', ').trim();
 };

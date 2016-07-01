@@ -12,6 +12,7 @@ test('forced abbr', t => {
   t.same(isAbbreviation('European', 'euro'), true);
   t.same(isAbbreviation('Github Bitbucket', 'githucket'), true);
   t.same(isAbbreviation('Facebook Bookmark', 'facebookmark'), true);
+  t.same(isAbbreviation('abcdef bcdef def', 'bcdef'), true);   
 });
 
 test('not an abbreviation', t => {
